@@ -1,4 +1,4 @@
-extends Node2D
+extends StaticBody2D
 
 
 # Declare member variables here. Examples:
@@ -15,10 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
 func _draw():
-	draw_circle(Vector2(0,0), 72, Color(ColorN("blue", 1)))
-
-
-# func _on_Bumper_body_entered(body):
-	
+	draw_circle(Vector2(0,0), 38, Color(ColorN("blue", 1)))
