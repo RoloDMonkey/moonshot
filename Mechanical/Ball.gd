@@ -17,3 +17,9 @@ func _ready():
 
 func _draw():
 	draw_circle(Vector2(0,0), 13.5, Color(ColorN("red", 1)))
+
+
+func _on_Ball_body_entered(body):
+	if (body.has_method("hit")):
+		body.hit(self)
+	
