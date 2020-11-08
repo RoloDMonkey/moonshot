@@ -19,6 +19,10 @@ config/name="Moonshot"
 run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
 
+[physics]
+
+2d/default_linear_damp=0.05
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
