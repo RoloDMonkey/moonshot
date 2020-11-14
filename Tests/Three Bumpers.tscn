@@ -1,18 +1,18 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Mechanical/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Mechanical/RigidBall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mechanical/Bumper.tscn" type="PackedScene" id=2]
 
 [node name="Node" type="Node"]
 
-[node name="BumperA" parent="." instance=ExtResource( 2 )]
-position = Vector2( 495, 275 )
-
-[node name="BumperB" parent="." instance=ExtResource( 2 )]
+[node name="BumperH" parent="." instance=ExtResource( 2 )]
 position = Vector2( 436, 207 )
 
-[node name="Bumper" parent="." instance=ExtResource( 2 )]
+[node name="BumperO" parent="." instance=ExtResource( 2 )]
 position = Vector2( 529, 202 )
 
-[node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 483, 167 )
+[node name="RigidBall" parent="." instance=ExtResource( 1 )]
+position = Vector2( 483, 80 )
+
+[node name="BumperT" parent="." instance=ExtResource( 2 )]
+position = Vector2( 495, 275 )
