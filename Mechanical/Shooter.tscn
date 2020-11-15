@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Mechanical/Shooter.gd" type="Script" id=1]
+[ext_resource path="res://Mechanical/Plunger.gd" type="Script" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
 rough = true
@@ -13,6 +14,23 @@ radius = 6.0
 [sub_resource type="CircleShape2D" id=3]
 radius = 6.0
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="PhysicsMaterial" id=6]
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 12, 3 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 6, 24 )
+
 [node name="Shooter" type="StaticBody2D"]
 physics_material_override = SubResource( 1 )
 script = ExtResource( 1 )
@@ -24,3 +42,29 @@ shape = SubResource( 2 )
 [node name="Right Guide" type="CollisionShape2D" parent="."]
 position = Vector2( 12.5, 85 )
 shape = SubResource( 3 )
+
+[node name="Left Stop" type="CollisionShape2D" parent="."]
+position = Vector2( -12.5, 113 )
+shape = SubResource( 9 )
+
+[node name="Right Stop" type="CollisionShape2D" parent="."]
+position = Vector2( 12.5, 113 )
+shape = SubResource( 10 )
+
+[node name="Plunger" type="RigidBody2D" parent="."]
+position = Vector2( 0, 100 )
+physics_material_override = SubResource( 6 )
+gravity_scale = 2.0
+script = ExtResource( 2 )
+
+[node name="Top" type="CollisionShape2D" parent="Plunger"]
+position = Vector2( 0, -9 )
+shape = SubResource( 7 )
+
+[node name="Stop" type="CollisionShape2D" parent="Plunger"]
+position = Vector2( 0, 3 )
+shape = SubResource( 8 )
+
+[node name="Shaft" type="CollisionShape2D" parent="Plunger"]
+position = Vector2( 0, 15 )
+shape = SubResource( 11 )
