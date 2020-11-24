@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Mechanical/Flipper.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Mechanical/RigidBall.tscn" type="PackedScene" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="Flipper" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64.2897, 191.282 )
+rotation = 0.528835
+
+[node name="RigidBall" parent="." instance=ExtResource( 2 )]
+position = Vector2( 107.546, 63.8929 )
