@@ -14,10 +14,10 @@ radius = 6.0
 [sub_resource type="CircleShape2D" id=3]
 radius = 6.0
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 6, 6 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 6, 6 )
 
 [sub_resource type="PhysicsMaterial" id=6]
@@ -28,7 +28,7 @@ radius = 6.0
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 12, 3 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 6, 36 )
 
 [node name="Shooter" type="StaticBody2D"]
@@ -45,11 +45,11 @@ shape = SubResource( 3 )
 
 [node name="Left Stop" type="CollisionShape2D" parent="."]
 position = Vector2( -12.5, 125 )
-shape = SubResource( 9 )
+shape = SubResource( 4 )
 
 [node name="Right Stop" type="CollisionShape2D" parent="."]
 position = Vector2( 12.5, 125 )
-shape = SubResource( 10 )
+shape = SubResource( 5 )
 
 [node name="Plunger" type="RigidBody2D" parent="."]
 position = Vector2( 0, 100 )
@@ -68,4 +68,4 @@ shape = SubResource( 8 )
 
 [node name="Shaft" type="CollisionShape2D" parent="Plunger"]
 position = Vector2( 0, 27 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )

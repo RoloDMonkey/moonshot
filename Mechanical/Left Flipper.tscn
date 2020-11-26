@@ -3,7 +3,7 @@
 [ext_resource path="res://Mechanical/Flipper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mechanical/Left Flipper.gd" type="Script" id=2]
 
-[node name="RigidBody2D" type="Node2D"]
+[node name="Left Flipper" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Flipper" parent="." instance=ExtResource( 1 )]
