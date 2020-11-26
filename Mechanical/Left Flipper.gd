@@ -26,6 +26,7 @@ func flip():
 		var current_offset = abs(deg2rad(self.flipper.rotation_degrees) - self.down_angle)
 		var total_offset = abs(self.up_angle - self.down_angle)
 		self.flip_time = (current_offset / total_offset) * self.flip_duration
+		self.flipper.angular_velocity = -10
 	
 func release():
 	self.flipping = false
@@ -43,6 +44,7 @@ func _physics_process(delta):
 			self.flip_time += delta
 		else:
 			self.flipping = false
+			self.flipper.angular_velocity = 0
 	elif (self.returning):
 		if (self.flip_time < self.flip_duration):
 			var weight = self.flip_time / self.flip_duration

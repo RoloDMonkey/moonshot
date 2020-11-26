@@ -9,4 +9,4 @@
 position = Vector2( 97.1952, 175.538 )
 
 [node name="RigidBall" parent="." instance=ExtResource( 1 )]
-position = Vector2( 145.583, 61.3754 )
+position = Vector2( 139.718, 65.3554 )

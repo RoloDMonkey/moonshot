@@ -1,10 +1,10 @@
-extends StaticBody2D
+extends RigidBody2D
 
 
 # Flipper
 
 func _draw():
-	var inside_color = Color(ColorN("white", 1))
+	var inside_color = Color("#424242")
 	var rubber_color = Color(ColorN("red", 1))
 	
 	draw_circle(Vector2(0, 0), 11.5, rubber_color)

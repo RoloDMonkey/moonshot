@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Mechanical/Flipper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mechanical/Left Flipper.gd" type="Script" id=2]
 
-[node name="Left Flipper" type="Node2D"]
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.3
+bounce = 0.3
+absorbent = true
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 11.5
+
+[node name="Left Flipper" type="StaticBody2D"]
+physics_material_override = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Flipper" parent="." instance=ExtResource( 1 )]
 rotation = 0.528835
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.528835
+shape = SubResource( 2 )
