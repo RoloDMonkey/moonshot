@@ -19,6 +19,11 @@ config/name="Moonshot"
 run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1032
+window/size/height=865
+
 [input]
 
 shoot={
