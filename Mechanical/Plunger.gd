@@ -2,9 +2,10 @@ extends RigidBody2D
 
 # Plunger
 
-export var plunger_speed = 800
-var shooting = false 
-export var cool_down_time = 1
+var plunger_speed = 100
+var push_speed = 600
+var shooting = false
+var cool_down_time = 1
 var cool_down_remaining = 0
 
 func _draw():
@@ -26,4 +27,6 @@ func shoot():
 		self.apply_central_impulse(Vector2(0, -1) * plunger_speed)
 		self.shooting = true
 		self.cool_down_remaining = self.cool_down_time
-	
+
+func get_push_speed():
+	return self.push_speed

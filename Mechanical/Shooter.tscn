@@ -44,15 +44,15 @@ position = Vector2( 12.5, 85 )
 shape = SubResource( 3 )
 
 [node name="Left Stop" type="CollisionShape2D" parent="."]
-position = Vector2( -12.5, 125 )
+position = Vector2( -12.5, 130 )
 shape = SubResource( 4 )
 
 [node name="Right Stop" type="CollisionShape2D" parent="."]
-position = Vector2( 12.5, 125 )
+position = Vector2( 12.5, 130 )
 shape = SubResource( 5 )
 
 [node name="Plunger" type="RigidBody2D" parent="."]
-position = Vector2( 0, 100 )
+position = Vector2( 0, 105 )
 physics_material_override = SubResource( 6 )
 gravity_scale = 2.0
 continuous_cd = 2

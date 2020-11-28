@@ -9,3 +9,5 @@ func _integrate_forces(state):
 			var push_speed = o.get_push_speed()
 			var contact_normal = state.get_contact_local_normal(i).normalized()
 			self.apply_central_impulse(contact_normal * push_speed)
+		if o.has_method("hit"):
+			o.hit()

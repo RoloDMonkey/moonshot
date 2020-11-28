@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Moonshot"
+config/description="Moonshot Pinball (prototype) made for Game Off 2020."
 run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
 
@@ -23,6 +24,7 @@ config/icon="res://icon.png"
 
 window/size/width=1032
 window/size/height=865
+window/energy_saving/keep_screen_on=false
 
 [input]
 
@@ -34,6 +36,7 @@ shoot={
 
 [physics]
 
+2d/default_gravity=196
 2d/default_linear_damp=0.05
 
 [rendering]
@@ -41,4 +44,5 @@ shoot={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
