@@ -74,6 +74,14 @@ position = Vector2( 387, 13 )
 polygon = PoolVector2Array( 116, 0, 0, 0, 12, 1, 24, 3, 36, 6, 47, 10, 58, 16, 68, 22, 78, 30, 86, 38, 94, 48, 100, 58, 106, 69, 110, 80, 113, 92, 115, 104, 116, 116 )
 script = ExtResource( 7 )
 
+[node name="Left Bottom" type="CollisionPolygon2D" parent="Borders"]
+position = Vector2( 14.4049, 6.40271 )
+polygon = PoolVector2Array( 0, 768, 205, 893, 0, 893 )
+
+[node name="Right Bottom" type="CollisionPolygon2D" parent="Borders"]
+position = Vector2( -58.8038, 6.40271 )
+polygon = PoolVector2Array( 516, 768, 311, 893, 516, 893 )
+
 [node name="Bumper S" parent="." instance=ExtResource( 8 )]
 position = Vector2( 280, 266 )
 
