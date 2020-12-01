@@ -2,7 +2,7 @@
 
 Moonshot Pinball, a prototype developed for Game Off 2020 promoted by itch.io and GitHub.
 
-Published game on itch.io: (https://rolodmonkey.itch.io/moonshot)
+Published game on itch.io: https://rolodmonkey.itch.io/moonshot
 
 Background graphics by [João Ribeiro](https://www.artstation.com/wodzgn). 
 
