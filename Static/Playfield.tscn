@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Mechanical/Right Flipper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mechanical/Shooter.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Static/Top Right Curve.gd" type="Script" id=7]
 [ext_resource path="res://Mechanical/Bumper.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Static/Left Lane Gude.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Static/Ball Out.tscn" type="PackedScene" id=10]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.5
@@ -75,12 +76,10 @@ polygon = PoolVector2Array( 116, 0, 0, 0, 12, 1, 24, 3, 36, 6, 47, 10, 58, 16, 6
 script = ExtResource( 7 )
 
 [node name="Left Bottom" type="CollisionPolygon2D" parent="Borders"]
-position = Vector2( 14.4049, 6.40271 )
-polygon = PoolVector2Array( 0, 768, 205, 893, 0, 893 )
+polygon = PoolVector2Array( 0, 768, 201, 909, 0, 909 )
 
 [node name="Right Bottom" type="CollisionPolygon2D" parent="Borders"]
-position = Vector2( -58.8038, 6.40271 )
-polygon = PoolVector2Array( 516, 768, 311, 893, 516, 893 )
+polygon = PoolVector2Array( 467, 772, 272, 909, 467, 909 )
 
 [node name="Bumper S" parent="." instance=ExtResource( 8 )]
 position = Vector2( 280, 266 )
@@ -99,3 +98,6 @@ position = Vector2( 50, 658 )
 
 [node name="Right Lane Guide" parent="." instance=ExtResource( 4 )]
 position = Vector2( 420, 658 )
+
+[node name="Ball Out" parent="." instance=ExtResource( 10 )]
+position = Vector2( 236.5, 926 )

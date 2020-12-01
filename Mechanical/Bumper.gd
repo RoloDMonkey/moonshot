@@ -2,6 +2,7 @@ extends StaticBody2D
 
 # Bumper
 
+
 var push_speed = 200
 
 func _draw():

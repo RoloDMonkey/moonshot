@@ -17,6 +17,6 @@ func addPoints(points):
 func updateScore():
 	self.score_label.text = str(self.total_score)
 
-func _process(delta):
+func _process(_delta):
 	self.updateScore()
 	
