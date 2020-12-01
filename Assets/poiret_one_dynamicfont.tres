@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/PoiretOne-Regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 32
+size = 20
 outline_size = 1
 outline_color = Color( 0.813711, 0.813711, 0.0086016, 1 )
 extra_spacing_char = 4

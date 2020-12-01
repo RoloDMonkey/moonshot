@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Static/Playfield.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Display/Score.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Root.gd" type="Script" id=3]
 [ext_resource path="res://RigidBall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/poiret_one_dynamicfont.tres" type="DynamicFont" id=5]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 3 )
@@ -16,3 +17,16 @@ position = Vector2( 646.309, 60.3675 )
 [node name="RigidBall" parent="." instance=ExtResource( 4 )]
 position = Vector2( 485.088, 809.429 )
 sleeping = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 560.788
+margin_top = 752.905
+margin_right = 1003.79
+margin_bottom = 833.905
+custom_fonts/font = ExtResource( 5 )
+text = "Shoot: W, Up, D-Pad Up
+Left Flipper: A, Left, Left Triggers
+Right Flipper: D, Right, Right Triggers"
+__meta__ = {
+"_edit_use_anchors_": false
+}
