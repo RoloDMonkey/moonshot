@@ -4,5 +4,5 @@ extends Area2D
 
 signal ball_out
 
-func _on_Ball_Out_body_entered(body):
+func _on_Ball_Out_body_entered(_body):
 	emit_signal("ball_out")
