@@ -14,4 +14,5 @@ script = ExtResource( 3 )
 position = Vector2( 646.309, 60.3675 )
 
 [node name="RigidBall" parent="." instance=ExtResource( 4 )]
-position = Vector2( 485.77, 791.861 )
+position = Vector2( 485.088, 809.429 )
+sleeping = true

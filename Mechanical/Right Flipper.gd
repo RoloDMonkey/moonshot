@@ -14,9 +14,9 @@ func _ready():
 	self.flipper = self.find_node("Flipper")
 
 func _input(event):
-	if (event.is_action_pressed("ui_right")):
+	if (event.is_action_pressed("right_button")):
 		self.flip()
-	elif (event.is_action_released("ui_right")):
+	elif (event.is_action_released("right_button")):
 		self.release()
 		
 func flip():
