@@ -12,20 +12,15 @@ func _ready():
 	self.ball = $RigidBall
 	self.loadBall()
 	$"Playfield/Ball Out".connect("ball_out", self, "ballOut")
-	
+
 # TODO: do this with signals
 func addPoints(points):
 	self.player_one_score.addPoints(points)
 
 func loadBall():
-	self.ball.position.x = 485
-	self.ball.position.y = 809
-	self.ball.set_sleeping(false)
+	self.ball.start_position = Vector2(485, 809)
+	self.ball.reset = true
 
 func ballOut():
-	self.ball.set_sleeping(true)
 	self.ball_in_play += 1
-	self.ball.set_angular_velocity(0)
-	self.ball.set_applied_force(Vector2(0, 0))
-	self.ball.set_linear_velocity(Vector2(0, 0))
 	self.loadBall()
