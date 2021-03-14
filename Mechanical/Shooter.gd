@@ -3,7 +3,7 @@ extends StaticBody2D
 # Shooter
 
 func _draw():
-	var line_color = Color(ColorN("blue", 1))
+	var line_color = Global.placeholder_color
 	draw_line(Vector2(-12.5, 85), Vector2(-12.5, -46.5), line_color, 1.0, true)
 	draw_line(Vector2(12.5, 85), Vector2(12.5, -46.5), line_color, 1.0, true)
 	draw_line(Vector2(-12.5, 85), Vector2(-1.5, 85), line_color, 1.0, true)

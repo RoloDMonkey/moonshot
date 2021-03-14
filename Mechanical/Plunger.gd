@@ -9,8 +9,8 @@ var cool_down_time = 1
 var cool_down_remaining = 0
 
 func _draw():
-	draw_circle(Vector2(0,-9), 6, Color(ColorN("blue", 1)))
-	draw_rect(Rect2(-6, -9, 12, 36), Color(ColorN("blue", 1)))
+	draw_circle(Vector2(0,-9), 6, Global.placeholder_color)
+	draw_rect(Rect2(-6, -9, 12, 36), Global.placeholder_color)
 
 func _process(delta):
 	if self.shooting:

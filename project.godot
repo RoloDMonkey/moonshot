@@ -20,6 +20,10 @@ config/description="Moonshot Pinball (prototype) made for Game Off 2020."
 run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://AutoLoad/Global.gd"
+
 [display]
 
 window/size/width=1032
