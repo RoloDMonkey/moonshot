@@ -2,6 +2,8 @@ extends StaticBody2D
 
 # Bumper
 
+signal add_points(base_points)
+
 var push_speed = 200
 
 func _draw():
@@ -11,5 +13,4 @@ func get_push_speed():
 	return self.push_speed
 
 func hit():
-	# TODO: Do this with signals.
-	self.find_parent("Root").addPoints(100)
+	emit_signal("add_points", 100)
