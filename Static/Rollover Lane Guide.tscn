@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Static/Rollover Lane Guide.gd" type="Script" id=1]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.5
+bounce = 0.1
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11, 16 )
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.5
+bounce = 0.5
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 11.0
+
+[node name="Rollover Lane Guide" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Guide" type="StaticBody2D" parent="."]
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Guide"]
+shape = SubResource( 2 )
+
+[node name="Posts" type="StaticBody2D" parent="."]
+physics_material_override = SubResource( 3 )
+
+[node name="Top Post" type="CollisionShape2D" parent="Posts"]
+position = Vector2( 0, -16 )
+shape = SubResource( 4 )
+
+[node name="Bottom Post" type="CollisionShape2D" parent="Posts"]
+position = Vector2( 0, 16 )
+shape = SubResource( 5 )
