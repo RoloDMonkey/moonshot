@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Mechanical/Insert Light.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Mechanical/Rollover Light.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Static/Rollover Lane Guide.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Mechanical/Lane Rollover.tscn" type="PackedScene" id=3]
 [ext_resource path="res://RigidBall.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Tests/Insert Light Test.gd" type="Script" id=5]
 
@@ -18,9 +17,9 @@ position = Vector2( 122, 161 )
 [node name="RigidBall" parent="." instance=ExtResource( 4 )]
 position = Vector2( 87.4521, 77.5838 )
 
-[node name="LaneRollover" parent="." instance=ExtResource( 3 )]
+[node name="Rollover Light" parent="." instance=ExtResource( 1 )]
 position = Vector2( 94.5, 161 )
 
-[node name="Insert Light" parent="." instance=ExtResource( 1 )]
-position = Vector2( 94.5, 113 )
-[connection signal="roll_over" from="LaneRollover" to="." method="_on_LaneRollover_roll_over"]
+[node name="RigidBall2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 93.9275, 6.17183 )
+[connection signal="light_activated" from="Rollover Light" to="." method="_on_Rollover_Light_light_activated"]
