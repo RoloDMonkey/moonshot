@@ -14,3 +14,6 @@ func _on_Lane_Rollover_roll_over():
 	if (!self.activated) :
 		emit_signal("light_activated")
 		self.activated = true
+		
+#TODO: We probably need a function for de-activating the child Insert Light,
+#      that can be called by higher level elements.
