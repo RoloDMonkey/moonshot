@@ -26,7 +26,7 @@ func flip():
 		var current_offset = abs(deg2rad(self.flipper.rotation_degrees) - self.down_angle)
 		var total_offset = abs(self.up_angle - self.down_angle)
 		self.flip_time = (current_offset / total_offset) * self.flip_duration
-		self.flipper.angular_velocity = 10
+		self.flipper.angular_velocity = 40
 	
 func release():
 	self.flipping = false
