@@ -3,7 +3,7 @@ extends RigidBody2D
 # Plunger
 
 var plunger_speed = 100
-var push_speed = 600
+export var push_speed = 700
 var shooting = false
 var cool_down_time = 1
 var cool_down_remaining = 0
