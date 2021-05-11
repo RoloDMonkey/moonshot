@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Mechanical/Insert Light.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Mechanical/Lane Rollover.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mechanical/Rollover Light.gd" type="Script" id=3]
+
+[node name="Rollover Light" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Lane Rollover" parent="." instance=ExtResource( 2 )]
+
+[node name="Insert Light" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -48 )
+[connection signal="roll_over" from="Lane Rollover" to="." method="_on_Lane_Rollover_roll_over"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Mechanical/One Way Gate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Static/Rollover Lane Guide.tscn" type="PackedScene" id=2]
+[ext_resource path="res://RigidBall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Mechanical/Bumper.tscn" type="PackedScene" id=4]
+
+[node name="One Way Gate Test" type="Node2D"]
+
+[node name="Rollover Lane Guide" parent="." instance=ExtResource( 2 )]
+position = Vector2( 89.7657, 95.24 )
+
+[node name="Rollover Lane Guide2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 157.285, 95.871 )
+
+[node name="One Way Gate" parent="." instance=ExtResource( 1 )]
+position = Vector2( 193.852, 72.8995 )
+
+[node name="RigidBall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 122.124, 11.017 )
+
+[node name="Bumper" parent="." instance=ExtResource( 4 )]
+position = Vector2( 118.843, 154.237 )
+
+[node name="Rollover Lane Guide3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 228.543, 94.9334 )
+
+[node name="RigidBall2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 193.852, 96.3398 )
+
+[node name="Bumper2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 196.664, 154.706 )
+
+[node name="One Way Gate2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 123.062, 73.6027 )
+rotation = 3.14159

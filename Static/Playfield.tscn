@@ -10,6 +10,7 @@
 [ext_resource path="res://Mechanical/Bumper.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Static/Left Lane Guide.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Static/Ball Out.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Mechanical/One Way Gate.tscn" type="PackedScene" id=11]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.5
@@ -23,9 +24,6 @@ extents = Vector2( 6.5, 432.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 5, 352 )
-
-[sub_resource type="CircleShape2D" id=5]
-radius = 5.0
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 258, 6.5 )
@@ -62,10 +60,6 @@ shape = SubResource( 3 )
 position = Vector2( 462, 513 )
 shape = SubResource( 4 )
 
-[node name="Shooter Lane Top" type="CollisionShape2D" parent="Borders"]
-position = Vector2( 462, 161 )
-shape = SubResource( 5 )
-
 [node name="Top Border" type="CollisionShape2D" parent="Borders"]
 position = Vector2( 258, 6.5 )
 shape = SubResource( 6 )
@@ -80,6 +74,14 @@ polygon = PoolVector2Array( 0, 768, 201, 909, 0, 909 )
 
 [node name="Right Bottom" type="CollisionPolygon2D" parent="Borders"]
 polygon = PoolVector2Array( 467, 772, 272, 909, 467, 909 )
+
+[node name="Top Right Inner Curve" type="CollisionPolygon2D" parent="Borders"]
+position = Vector2( 385, 129 )
+polygon = PoolVector2Array( 58, 0, 82, 0, 82, -7, 81, -14, 79, -21, 77, -28, 74, -35, 71, -41, 67, -47, 63, -53, 58, -58 )
+
+[node name="Top Right Inner Curve2" type="CollisionPolygon2D" parent="Borders"]
+position = Vector2( 385, 186.845 )
+polygon = PoolVector2Array( 82, -58, 82, 0, 82, -7, 81, -14, 79, -21, 77, -28, 74, -35, 71, -41, 67, -47, 63, -53, 58, -58 )
 
 [node name="Bumper S" parent="." instance=ExtResource( 8 )]
 position = Vector2( 280, 266 )
@@ -101,3 +103,7 @@ position = Vector2( 420, 658 )
 
 [node name="Ball Out" parent="." instance=ExtResource( 10 )]
 position = Vector2( 236.5, 926 )
+
+[node name="Shooter One Way Gate" parent="." instance=ExtResource( 11 )]
+position = Vector2( 457, 60 )
+rotation = -0.785398
