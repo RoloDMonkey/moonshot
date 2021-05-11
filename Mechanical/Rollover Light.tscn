@@ -11,4 +11,5 @@ script = ExtResource( 3 )
 
 [node name="Insert Light" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -48 )
+
 [connection signal="roll_over" from="Lane Rollover" to="." method="_on_Lane_Rollover_roll_over"]
