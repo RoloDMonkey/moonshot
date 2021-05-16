@@ -22,4 +22,5 @@ position = Vector2( 94.5, 161 )
 
 [node name="RigidBall2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 93.9275, 6.17183 )
+
 [connection signal="light_activated" from="Rollover Light" to="." method="_on_Rollover_Light_light_activated"]

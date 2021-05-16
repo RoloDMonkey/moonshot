@@ -25,7 +25,7 @@ func addPoints(base_points):
 	self.player_one_score.addPoints(base_points)
 
 func loadBall():
-	self.ball.start_position = Vector2(485, 809)
+	self.ball.start_position = Vector2(484, 790)
 	self.ball.reset = true
 
 func ballOut():

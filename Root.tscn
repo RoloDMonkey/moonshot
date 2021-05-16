@@ -15,7 +15,7 @@ script = ExtResource( 3 )
 position = Vector2( 646.309, 60.3675 )
 
 [node name="RigidBall" parent="." instance=ExtResource( 4 )]
-position = Vector2( 236.717, 797.823 )
+position = Vector2( 485, 809 )
 
 [node name="Directions" type="Label" parent="."]
 margin_left = 560.788

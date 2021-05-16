@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Mechanical/Right Flipper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mechanical/Shooter.tscn" type="PackedScene" id=2]
@@ -11,27 +11,26 @@
 [ext_resource path="res://Static/Left Lane Guide.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Static/Ball Out.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Mechanical/One Way Gate.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Static/Right Inner Structure.gd" type="Script" id=12]
+[ext_resource path="res://Complex/Moon Lanes.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Materials/metal.tres" type="PhysicsMaterial" id=14]
 
-[sub_resource type="PhysicsMaterial" id=1]
-friction = 0.5
-bounce = 0.1
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.5, 432.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.5, 432.5 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 6.5, 432.5 )
+extents = Vector2( 258, 6.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 5, 352 )
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 258, 6.5 )
-
 [node name="Playfield" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 258, 432.5 )
+position = Vector2( 258, 432.545 )
 z_index = -1
 texture = ExtResource( 5 )
 
@@ -45,28 +44,24 @@ position = Vector2( 324, 799 )
 position = Vector2( 485, 746 )
 
 [node name="Borders" type="StaticBody2D" parent="."]
-physics_material_override = SubResource( 1 )
+physics_material_override = ExtResource( 14 )
 script = ExtResource( 6 )
 
 [node name="Left Border" type="CollisionShape2D" parent="Borders"]
 position = Vector2( 6.5, 432.5 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Right Border" type="CollisionShape2D" parent="Borders"]
 position = Vector2( 509.5, 432.5 )
-shape = SubResource( 3 )
-
-[node name="Shooter Lane" type="CollisionShape2D" parent="Borders"]
-position = Vector2( 462, 513 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="Top Border" type="CollisionShape2D" parent="Borders"]
 position = Vector2( 258, 6.5 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="Top Right Curve" type="CollisionPolygon2D" parent="Borders"]
-position = Vector2( 387, 13 )
-polygon = PoolVector2Array( 116, 0, 0, 0, 12, 1, 24, 3, 36, 6, 47, 10, 58, 16, 68, 22, 78, 30, 86, 38, 94, 48, 100, 58, 106, 69, 110, 80, 113, 92, 115, 104, 116, 116 )
+position = Vector2( 387.299, 13 )
+polygon = PoolVector2Array( 116, 0, 0, 0, 12, 1, 18, 2, 24, 3, 30, 4, 36, 6, 42, 8, 47, 10, 53, 13, 58, 16, 63, 19, 68, 22, 73, 26, 78, 30, 82, 34, 86, 38, 90, 43, 94, 48, 97, 53, 100, 58, 103, 63, 106, 69, 108, 74, 110, 80, 112, 86, 113, 92, 114, 98, 115, 104, 116, 116 )
 script = ExtResource( 7 )
 
 [node name="Left Bottom" type="CollisionPolygon2D" parent="Borders"]
@@ -75,25 +70,39 @@ polygon = PoolVector2Array( 0, 768, 201, 909, 0, 909 )
 [node name="Right Bottom" type="CollisionPolygon2D" parent="Borders"]
 polygon = PoolVector2Array( 467, 772, 272, 909, 467, 909 )
 
-[node name="Top Right Inner Curve" type="CollisionPolygon2D" parent="Borders"]
+[node name="Top Middle Curve" type="CollisionPolygon2D" parent="Borders"]
+position = Vector2( 180, 129 )
+rotation = -1.5708
+polygon = PoolVector2Array( 116, 0, 0, 0, 12, 1, 18, 2, 24, 3, 30, 4, 36, 6, 42, 8, 47, 10, 53, 13, 58, 16, 63, 19, 68, 22, 73, 26, 78, 30, 82, 34, 86, 38, 90, 43, 94, 48, 97, 53, 100, 58, 103, 63, 106, 69, 108, 74, 110, 80, 112, 86, 113, 92, 114, 98, 115, 104, 116, 116 )
+script = ExtResource( 7 )
+
+[node name="Right Inner Structure" type="StaticBody2D" parent="."]
+physics_material_override = ExtResource( 14 )
+script = ExtResource( 12 )
+
+[node name="Shooter Lane" type="CollisionShape2D" parent="Right Inner Structure"]
+position = Vector2( 462, 513 )
+shape = SubResource( 4 )
+
+[node name="Top Right Inner Curve" type="CollisionPolygon2D" parent="Right Inner Structure"]
 position = Vector2( 385, 129 )
 polygon = PoolVector2Array( 58, 0, 82, 0, 82, -7, 81, -14, 79, -21, 77, -28, 74, -35, 71, -41, 67, -47, 63, -53, 58, -58 )
 
-[node name="Top Right Inner Curve2" type="CollisionPolygon2D" parent="Borders"]
-position = Vector2( 385, 186.845 )
+[node name="Top Right Inner Curve2" type="CollisionPolygon2D" parent="Right Inner Structure"]
+position = Vector2( 487.748, 198.096 )
 polygon = PoolVector2Array( 82, -58, 82, 0, 82, -7, 81, -14, 79, -21, 77, -28, 74, -35, 71, -41, 67, -47, 63, -53, 58, -58 )
 
 [node name="Bumper S" parent="." instance=ExtResource( 8 )]
-position = Vector2( 280, 266 )
+position = Vector2( 296.392, 191.272 )
 
 [node name="Bumper H" parent="." instance=ExtResource( 8 )]
-position = Vector2( 196, 321 )
+position = Vector2( 381.614, 200.953 )
 
 [node name="Bumper O" parent="." instance=ExtResource( 8 )]
-position = Vector2( 349, 333 )
+position = Vector2( 251.131, 264.54 )
 
 [node name="Bumper T" parent="." instance=ExtResource( 8 )]
-position = Vector2( 268, 388 )
+position = Vector2( 343.21, 280.488 )
 
 [node name="Left Lane Guide" parent="." instance=ExtResource( 9 )]
 position = Vector2( 50, 658 )
@@ -107,3 +116,10 @@ position = Vector2( 236.5, 926 )
 [node name="Shooter One Way Gate" parent="." instance=ExtResource( 11 )]
 position = Vector2( 457, 60 )
 rotation = -0.785398
+
+[node name="Moon Lanes" parent="." instance=ExtResource( 13 )]
+position = Vector2( 243, 55 )
+
+[node name="Top Middle One Way Gate" parent="." instance=ExtResource( 11 )]
+position = Vector2( 226, 60 )
+rotation = 0.785398

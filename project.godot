@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -64,6 +63,7 @@ right_button={
 
 2d/default_gravity=196
 2d/default_linear_damp=0.05
+2d/default_angular_damp=0.01
 
 [rendering]
 
