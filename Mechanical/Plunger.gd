@@ -7,6 +7,10 @@ export var push_speed = 700
 var shooting = false
 var cool_down_time = 1
 var cool_down_remaining = 0
+var sound
+
+func _ready():
+	self.sound = self.find_node("plungerHit")
 
 func _draw():
 	draw_circle(Vector2(0,-9), 6, Global.placeholder_color)
@@ -21,6 +25,7 @@ func _process(delta):
 func _input(event):
 	if event.is_action_pressed("shoot"):
 		self.shoot()
+		self.playSound()
 		
 func shoot():
 	if !self.shooting:
@@ -30,3 +35,6 @@ func shoot():
 
 func get_push_speed():
 	return self.push_speed
+
+func playSound():
+	self.sound.play()

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pinball.wav-2935428ab046d197632e8ba5b1530b18.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/pinball.wav"
+dest_files=[ "res://.import/pinball.wav-2935428ab046d197632e8ba5b1530b18.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

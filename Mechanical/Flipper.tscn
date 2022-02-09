@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Mechanical/Flipper.gd" type="Script" id=1]
 [ext_resource path="res://Materials/rubber.tres" type="PhysicsMaterial" id=2]
+[ext_resource path="res://Assets/Sounds/flipperThunk.wav" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 11.5
@@ -27,3 +28,6 @@ one_way_collision_margin = 5.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 0, -11.5, 61, -6.5, 61, 6.5, 0, 11.5 )
 one_way_collision_margin = 5.0
+
+[node name="flipperThunk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

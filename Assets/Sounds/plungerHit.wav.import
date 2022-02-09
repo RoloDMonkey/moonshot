@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/plungerHit.wav-48be9a7e409a4daa657b0c2d4bb3fc85.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/plungerHit.wav"
+dest_files=[ "res://.import/plungerHit.wav-48be9a7e409a4daa657b0c2d4bb3fc85.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

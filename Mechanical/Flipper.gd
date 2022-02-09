@@ -1,7 +1,11 @@
 extends RigidBody2D
 
-
 # Flipper
+
+var sound
+
+func _ready():
+	self.sound = self.find_node("flipperThunk")
 
 func _draw():
 	var inside_color = Color("#424242")
@@ -25,3 +29,6 @@ func _draw():
 		Vector2(0, 7.5)
 	]
 	draw_colored_polygon(flipper_polygon, inside_color)
+	
+func playSound():
+	self.sound.play()

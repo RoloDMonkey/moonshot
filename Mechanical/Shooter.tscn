@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Mechanical/Shooter.gd" type="Script" id=1]
 [ext_resource path="res://Mechanical/Plunger.gd" type="Script" id=2]
 [ext_resource path="res://Materials/rubber.tres" type="PhysicsMaterial" id=3]
+[ext_resource path="res://Assets/Sounds/plungerHit.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.0
@@ -65,3 +66,6 @@ shape = SubResource( 7 )
 [node name="Shaft" type="CollisionShape2D" parent="Plunger"]
 position = Vector2( 0, 27 )
 shape = SubResource( 8 )
+
+[node name="plungerHit" type="AudioStreamPlayer" parent="Plunger"]
+stream = ExtResource( 4 )

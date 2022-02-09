@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bumperHit.wav-003791a032655f7e715e4016b80561fe.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/bumperHit.wav"
+dest_files=[ "res://.import/bumperHit.wav-003791a032655f7e715e4016b80561fe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
